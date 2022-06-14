@@ -10,10 +10,10 @@ on:
     branches: [ "main" ]
     
 env:
-  JWT_SECRET: test
-  GOOGLE_CLIENT_ID: 315209859245-pnp48v117ub8l307aj0eqsiu3h5og8aj.apps.googleusercontent.com
-  GOOGLE_CLIENT_SECRET: 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
-  SERVER_DB_TEST: mongodb+srv://zen:test123@cluster0.p3dxp.mongodb.net/?retryWrites=true&w=majority
+  JWT_SECRET: ${{ secrets.JWT_SECRET }}
+  GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+  GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+  SERVER_DB_TEST: ${{ secrets.SERVER_DB_TEST }}
   
 jobs:
   build:
